@@ -1,0 +1,300 @@
+[
+  {
+    "id": "login-page",
+    "uri": "features/scenarios/login.feature",
+    "keyword": "Feature",
+    "name": "login page",
+    "description": "",
+    "line": 2,
+    "tags": [
+      {
+        "name": "@login",
+        "line": 1
+      }
+    ],
+    "elements": [
+      {
+        "id": "login-page;success-login-with-correct-credentials-(using-example);;2",
+        "keyword": "Scenario Outline",
+        "name": "success login with correct credentials (using example)",
+        "description": "",
+        "line": 31,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on the homepage",
+            "line": 22,
+            "match": {
+              "location": "features/step_definitions/login_step.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3120286800
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I click  sign in",
+            "line": 23,
+            "match": {
+              "location": "features/step_definitions/login_step.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1404286200
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I enter username as \"wele.testing@gmail.com\"",
+            "line": 24,
+            "match": {
+              "location": "features/step_definitions/login_step.rb:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 138480900
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I enter password as \"abc123\"",
+            "line": 25,
+            "match": {
+              "location": "features/step_definitions/login_step.rb:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 126690600
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I click button login",
+            "line": 26,
+            "match": {
+              "location": "features/step_definitions/login_step.rb:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2614591200
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should be logged in",
+            "line": 27,
+            "match": {
+              "location": "features/step_definitions/login_step.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 63221200
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          },
+          {
+            "name": "@test3",
+            "line": 20
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.39.2/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31500
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.39.2/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23000
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1820579300
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 70400
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.39.2/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 187261800
+            }
+          }
+        ]
+      },
+      {
+        "id": "login-page;success-login-with-correct-credentials-(using-example);;3",
+        "keyword": "Scenario Outline",
+        "name": "success login with correct credentials (using example)",
+        "description": "",
+        "line": 32,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I am on the homepage",
+            "line": 22,
+            "match": {
+              "location": "features/step_definitions/login_step.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2003838000
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I click  sign in",
+            "line": 23,
+            "match": {
+              "location": "features/step_definitions/login_step.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 843527800
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I enter username as \"wele.testing2@gmail.com\"",
+            "line": 24,
+            "match": {
+              "location": "features/step_definitions/login_step.rb:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 138359000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I enter password as \"xyz345\"",
+            "line": 25,
+            "match": {
+              "location": "features/step_definitions/login_step.rb:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 125925100
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I click button login",
+            "line": 26,
+            "match": {
+              "location": "features/step_definitions/login_step.rb:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2938408900
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I should be logged in",
+            "line": 27,
+            "match": {
+              "location": "features/step_definitions/login_step.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 79672300
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 1
+          },
+          {
+            "name": "@test3",
+            "line": 20
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.39.2/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23400
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.39.2/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18900
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 245046100
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19900
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.39.2/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 186736300
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

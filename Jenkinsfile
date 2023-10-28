@@ -3,12 +3,13 @@ pipeline{
     stages{
         stage('bundle install'){
             steps{
+                sh 'gem install bundle'
                 sh 'bundle install'
             }
         }
-        stage('run automation'){
+        stage('run test'){
             steps{
-                sh 'cucumber -t @test3'
+                sh "cucumber -t '@test3'"
             }
         }
     }
