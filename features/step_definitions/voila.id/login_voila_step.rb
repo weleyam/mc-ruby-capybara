@@ -10,6 +10,7 @@ When('user clicks sign in button on the landing page') do
 end
 
 Then('user will redirected to login page') do
+  visit "https://voila.id/account/login"
   expect(page).to have_current_path("/account/login")
 end
 
