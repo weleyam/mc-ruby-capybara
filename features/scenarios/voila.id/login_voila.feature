@@ -1,7 +1,9 @@
-@login-voila
 Feature: login page
 
-@test5
+@login-voila
+ Scenario: as a user I can open google
+    Given user access google
+
   Scenario: as a user I can login at voila.id
     Given user access voila.id
     When user clicks sign in button on the landing page

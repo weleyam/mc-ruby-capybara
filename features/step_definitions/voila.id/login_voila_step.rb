@@ -29,3 +29,7 @@ end
 Then('user success login') do
   assert_current_path("https://voila.id/", wait: 5)
 end
+
+Given('user access google') do
+  visit "https://www.google.com"
+end
