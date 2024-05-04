@@ -1,3 +1,4 @@
+require 'allure-cucumber'
 require 'capybara'
 require 'capybara/rspec'
 require 'capybara/cucumber'
@@ -38,12 +39,20 @@ Capybara.configure do |config|
     config.default_max_wait_time = 30
 end
 
+AllureCucumber.configure do |config|
+    config.results_directory = "reports/allure-results"
+    config.clean_results_directory = true
+    config.logging_level = Logger::INFO
+    config.logger = Logger.new($stdout, Logger::DEBUG)
+    config.environment = "production"
+    config.failure_exception = RSpec::Expectations::ExpectationNotMetError
+end
+
 def take_screenshot(scenario)
     scenario_name = scenario.name
     time = Time.now.strftime("%Y-%m-%d %H%M")
     screenshot_path = 'features/support/reports/screenshot/' + time + ' - ' + scenario_name + '.png'
     Capybara.current_session.driver.save_screenshot(screenshot_path)
     image = open(screenshot_path, 'rb', &:read)
-    encoded_image = Base64.encode64(image)
-    attach(encoded_image, 'image/png;base64', 'SCREENSHOT')
+    attach(image, 'image/png', 'SCREENSHOT')
 end

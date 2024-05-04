@@ -1,5 +1,6 @@
 source 'https://rubygems.org/'
 
+gem 'allure-cucumber', '~> 2.24', '>= 2.24.4'
 gem 'capybara', '~> 3.39', '>= 3.39.2'
 gem 'capybara-screenshot', '~> 1.0', '>= 1.0.26'
 gem 'cucumber', '~> 9.0', '>= 9.0.1'
