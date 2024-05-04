@@ -1,9 +1,10 @@
 Feature: login page
 
+@login-voila
  Scenario: as a user I can open google
     Given user access google
+    And user search "weleyam"
 
-@login-voila
   Scenario: as a user I can login at voila.id
     # Given user access voila.id
     # When user clicks sign in button on the landing page

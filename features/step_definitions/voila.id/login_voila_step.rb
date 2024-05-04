@@ -10,7 +10,6 @@ When('user clicks sign in button on the landing page') do
 end
 
 Then('user will redirected to login page') do
-  visit "https://voila.id/account/login"
   expect(page).to have_current_path("/account/login")
 end
 
@@ -33,4 +32,10 @@ end
 
 Given('user access google') do
   visit "https://www.google.com"
+end
+
+Then('user search {string}') do |key|
+  find(:xpath, "//*[@name='q']").set(key)
+  find(:xpath, "//*[@name='q']").send_keys(:enter)
+  sleep 3
 end
