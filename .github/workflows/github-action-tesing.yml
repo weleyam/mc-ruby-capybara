@@ -1,0 +1,31 @@
+name: Automation test scheduler
+
+on:
+  schedule:
+    cron: 0 13 * * *
+  workflow_dispatch:
+
+jobs:
+  capybara-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: main
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1 
+
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install
+
+      - name: Download and install ChromeDriver
+        uses: nanasess/setup-chromedriver@v1.0.8
+
+      - name: Run Capybara tests
+        run: cucumber -t @login-voila -f pretty -f json -o features/support/reports/result-cucumber.json
+

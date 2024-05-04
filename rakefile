@@ -1,11 +1,6 @@
 require 'cucumber/rake/task'
 
 namespace :cucumber do
-    default_opts = ["-f pretty", "-f json", "-o features/support/reports/result-cucumber.json"]
+  default_opts = ["-f pretty", "-f json", "-o features/support/reports/result-cucumber.json"]
 
-    Cucumber::Rake::Task.new(:run_1, "Run all test") do |t|
-        t.cucumber_opts = [*default_opts, "-t '@test3'"]
-    end
-
-    task test: "cucumber:run_1"
 end

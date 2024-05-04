@@ -1,7 +1,10 @@
 source 'https://rubygems.org/'
 
 gem 'capybara', '~> 3.39', '>= 3.39.2'
+gem 'capybara-screenshot', '~> 1.0', '>= 1.0.26'
 gem 'cucumber', '~> 9.0', '>= 9.0.1'
+gem 'rake', '~> 13.2', '>= 13.2.1'
+gem 'report_builder', '~> 1.9'
 gem 'rspec', '~> 3.4'
-gem 'webdrivers', '~> 5.3', '>= 5.3.1'
-gem 'rake', '~> 13.1'
+gem 'selenium-webdriver', '~> 4.20', '>= 4.20.1'
+gem 'site_prism', '~> 5.0', '>= 5.0.1'

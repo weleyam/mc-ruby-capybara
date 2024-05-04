@@ -1,3 +1,3 @@
 bundle install
 
-bundle exec rake cucumber:run_1
+cucumber -t @login-voila -f pretty -f json -o features/support/reports/result-cucumber.json
