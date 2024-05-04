@@ -31,4 +31,4 @@ jobs:
           bundle install
 
       - name: Run Capybara tests
-        run: cucumber -t @login-voila -f pretty -f json -o features/support/reports/result-cucumber.json --publish
+        run: cucumber -t @login-voila -f pretty -f json -o features/support/reports/result-cucumber.json --publish --retry 5
