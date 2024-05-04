@@ -9,16 +9,29 @@ require 'rspec'
 require 'selenium-webdriver'
 require 'site_prism'
 
+wait_time = 60 * 5
+
 Capybara.register_driver :selenium do |app|
+    profile = Selenium::WebDriver::Firefox::Profile.new
     options = Selenium::WebDriver::Firefox::Options.new
     options.add_argument('--headless')
+    options.add_preference 'dom.webdriver.enabled', false
+    options.add_preference 'dom.webnotifications.enabled', false
+    options.add_preference 'dom.push.enabled', false
+    options.add_argument('--width=1366')
+    options.add_argument('--height=1000')
+    options.add_argument('-private')
+    options.profile = profile
+    client = Selenium::WebDriver::Remote::Http::Default.new
+    client.open_timeout = wait_time
+    client.read_timeout = wait_time
     Capybara::Selenium::Driver.new(
-        app,
-        browser: :firefox,
-        options: options,
-        timeout: 30
+      app,
+      browser: :firefox,
+      options: options,
+      http_client: client,
     )
-end
+  end
 
 Capybara.configure do |config|
     config.default_driver = :selenium

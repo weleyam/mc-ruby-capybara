@@ -2,7 +2,6 @@ Given('user access voila.id') do
   # pending # Write code here that turns the phrase above into concrete actions
   @landing_page = LandingPage.new
   @landing_page.load
-  sleep 10
 end
 
 When('user clicks sign in button on the landing page') do
