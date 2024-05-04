@@ -2,12 +2,14 @@ name: Automation test scheduler
 
 on:
   schedule:
-    cron: 0 13 * * *
+    - cron: 0 13 * * *
   workflow_dispatch:
 
 jobs:
-  capybara-tests:
+  automation-test:
+    name: Automation test Ruby Capybara (wele)
     runs-on: ubuntu-latest
+    
     steps:
       - uses: actions/checkout@v3
         with:
