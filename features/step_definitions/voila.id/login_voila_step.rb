@@ -5,6 +5,7 @@ Given('user access voila.id') do
 end
 
 When('user clicks sign in button on the landing page') do
+  @landing_page.wait_until_btn_sign_in_visible
   @landing_page.click_btn_sign_in
 end
 
