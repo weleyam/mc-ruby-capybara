@@ -14,7 +14,7 @@ wait_time = 60 * 5
 Capybara.register_driver :selenium do |app|
     profile = Selenium::WebDriver::Firefox::Profile.new
     options = Selenium::WebDriver::Firefox::Options.new
-    # options.add_argument('--headless')
+    options.add_argument('--headless')
     options.add_preference 'dom.webdriver.enabled', false
     options.add_preference 'dom.webnotifications.enabled', false
     options.add_preference 'dom.push.enabled', false

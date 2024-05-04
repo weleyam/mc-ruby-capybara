@@ -17,4 +17,6 @@ at_exit do
       config.includes_image = true
     end
     ReportBuilder.build_report
+
+    Kernel.exit(0)
 end
