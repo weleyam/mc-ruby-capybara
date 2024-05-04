@@ -10,7 +10,7 @@ require 'selenium-webdriver'
 require 'site_prism'
 
 Capybara.register_driver :selenium do |app|
-    Capybara::Selenium::Driver.new(app, browser: :chrome, timeout: 30)
+    Capybara::Selenium::Driver.new(app, browser: :firefox, timeout: 30)
 end
 
 Capybara.configure do |config|
