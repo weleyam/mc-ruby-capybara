@@ -1,6 +1,6 @@
 
 class LoginPage < SitePrism::Page
-  element :txt_username, :xpath, "//input[@data-test-id='CT_component_login_input']"
+  element :txt_username, :xpath, "/html/body/div[2]/div/div/div[2]/div/form/div/div[2]/div[1]/div/div[1]/div/div/input"
   element :txt_password, :xpath, "//input[@data-test-id='CT_component_password_input']"
   element :btn_sign_in, :xpath, "//button[@data-test-id='CT_component_login_submit']"
 
