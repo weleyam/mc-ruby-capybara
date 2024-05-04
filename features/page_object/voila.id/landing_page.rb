@@ -1,6 +1,6 @@
 
 class LandingPage < SitePrism::Page
-  set_url("https://voila.id/")
+  set_url("https:www.voila.id/")
 
   element :btn_sign_in, :xpath, "//*[@data-test-id='CT-SignIn-Btn']"
 
