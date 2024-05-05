@@ -16,9 +16,9 @@ Capybara.register_driver :selenium do |app|
     profile = Selenium::WebDriver::Firefox::Profile.new
     options = Selenium::WebDriver::Firefox::Options.new
     options.add_argument('--headless')
-    options.add_preference 'dom.webdriver.enabled', false
-    options.add_preference 'dom.webnotifications.enabled', false
-    options.add_preference 'dom.push.enabled', false
+    # options.add_preference 'dom.webdriver.enabled', false
+    # options.add_preference 'dom.webnotifications.enabled', false
+    # options.add_preference 'dom.push.enabled', false
     # options.add_argument('--width=1366')
     # options.add_argument('--height=1000')
     options.add_argument('-private')
@@ -36,7 +36,7 @@ Capybara.register_driver :selenium do |app|
 
 Capybara.configure do |config|
     config.default_driver = :selenium
-    config.default_max_wait_time = 30
+    config.default_max_wait_time = 200
 end
 
 AllureCucumber.configure do |config|
@@ -54,5 +54,6 @@ def take_screenshot(scenario)
     screenshot_path = 'features/support/reports/screenshot/' + time + ' - ' + scenario_name + '.png'
     Capybara.current_session.driver.save_screenshot(screenshot_path)
     image = open(screenshot_path, 'rb', &:read)
+    # encoded_image = Base64.encode64(image)
     attach(image, 'image/png', 'SCREENSHOT')
 end

@@ -1,0 +1,4 @@
+# Default options for running Cucumber features
+default: -f pretty -f json -o features/support/reports/result-cucumber.json
+# default: --format AllureCucumber::CucumberFormatter 
+# default: --format Cucumber::Formatter::HTML -o features/support/reports/cucumber-test.html
