@@ -4,7 +4,7 @@ Feature: login page
     Given user access google
     And user search "weleyam"
 
-  @login-voila
+  @login-voila1
   Scenario: as a user I can login at voila.id
     Given user access voila.id
     When user clicks sign in button on the landing page

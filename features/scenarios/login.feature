@@ -1,7 +1,7 @@
 @login
 Feature: login page
 
-  @test1
+  @login-test
   Scenario: success login with correct credentials
     Given I am on the homepage
     When I click  sign in

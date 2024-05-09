@@ -8,6 +8,12 @@ After do |scenario|
     Capybara.current_session.driver.quit
 end
 
+# AfterStep do |scenario|
+#     sleep 3
+#     take_screenshot2
+#     # Capybara.current_session.driver.quit
+# end
+
 at_exit do
     ReportBuilder.configure do |config|
       config.input_path = 'features/support/reports/result-cucumber.json'

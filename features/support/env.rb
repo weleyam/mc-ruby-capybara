@@ -15,7 +15,7 @@ wait_time = 60 * 5
 Capybara.register_driver :selenium do |app|
     profile = Selenium::WebDriver::Firefox::Profile.new
     options = Selenium::WebDriver::Firefox::Options.new
-    options.add_argument('--headless')
+    # options.add_argument('--headless')
     # options.add_preference 'dom.webdriver.enabled', false
     # options.add_preference 'dom.webnotifications.enabled', false
     # options.add_preference 'dom.push.enabled', false
@@ -56,4 +56,14 @@ def take_screenshot(scenario)
     image = open(screenshot_path, 'rb', &:read)
     # encoded_image = Base64.encode64(image)
     attach(image, 'image/png', 'SCREENSHOT')
+end
+
+
+def take_screenshot2
+  time = Time.now.strftime("%Y-%m-%d %H%M%S%L")
+  screenshot_path = 'features/support/reports/screenshot/' + time + '.png'
+  Capybara.current_session.driver.save_screenshot(screenshot_path)
+  image = open(screenshot_path, 'rb', &:read)
+  # encoded_image = Base64.encode64(image)
+  attach(image, 'image/png', time)
 end
