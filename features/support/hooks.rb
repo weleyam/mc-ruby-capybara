@@ -24,5 +24,5 @@ at_exit do
     end
     ReportBuilder.build_report
 
-    Kernel.exit(0)
+    # Kernel.exit(0)
 end
